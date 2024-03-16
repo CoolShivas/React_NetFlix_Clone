@@ -7,8 +7,8 @@ import Card from "./components/Card";
 
 
 
-// const favProg = "amazon";
-const favProg = "netflix";
+const favProg = "amazon";
+// const favProg = "netflix";
 // const favProg = "altbalaji";
 
 // const Favourite = () => {
@@ -33,17 +33,17 @@ const favProg = "netflix";
 // }
 
 
-const Favourite = () => {
-    if (favProg === "amazon") {
-        return <Netflix />
-    }
-    else if (favProg === "netflix") {
-        return <Amazon />
-    }
-    else {
-        return <ErrorMsg />
-    }
-}
+// const Favourite = () => {
+//     if (favProg === "amazon") {
+//         return <Netflix />
+//     }
+//     else if (favProg === "netflix") {
+//         return <Amazon />
+//     }
+//     else {
+//         return <ErrorMsg />
+//     }
+// }
 
 
 function App() {
@@ -60,7 +60,9 @@ function App() {
             />
         })} */}
 
-        <Favourite></Favourite>
+        {/* <Favourite></Favourite> */}
+
+        {favProg === "netflix" ? <Netflix /> : <Amazon />}
 
     </>
 }

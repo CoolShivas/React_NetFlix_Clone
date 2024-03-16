@@ -2,6 +2,7 @@ import NetFlexData from "./NetFlexData";
 import Card from "./Card";
 
 
+
 const Netflix = () => {
     return <Card
         imgSrc={NetFlexData[3].imgSrc}
