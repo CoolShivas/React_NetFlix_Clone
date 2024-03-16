@@ -82,14 +82,26 @@ import NetFlexData from './components/NetFlexData'
 
 
 
-function special(val) {
-  return <Card
-    imgSrc={val.imgSrc}
-    title={val.title}
-    seriesName={val.seriesName}
-    link={val.link}
-  />
-}
+// function special(val, index) {
+//   return <Card
+//     key={index}
+//     imgSrc={val.imgSrc}
+//     title={val.title}
+//     seriesName={val.seriesName}
+//     link={val.link}
+//   />
+// }
+
+
+
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <>
+//     <h1 className='heading_style'> List of top 5 netflix series. </h1>
+//     {NetFlexData.map(special)}
+//   </>,
+// )
+
 
 
 
@@ -97,7 +109,16 @@ function special(val) {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <h1 className='heading_style'> List of top 5 netflix series. </h1>
-    {NetFlexData.map(special)}
+
+    {NetFlexData.map((val, index) => {
+      return <Card
+        key={index}
+        imgSrc={val.imgSrc}
+        title={val.title}
+        seriesName={val.seriesName}
+        link={val.link}
+      />
+    })}
 
   </>,
 )
