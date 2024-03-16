@@ -1,10 +1,12 @@
+import Images from "./Images";
 
 const Card = (props) => {
     // console.log(props);
     return <>
         <div className='main_container'>
             <div className='card'>
-                <img src={props.imgSrc} alt="Image not found" className='card__img' />
+                {/* <img src={props.imgSrc} alt="Image not found" className='card__img' /> */}
+                <Images imgSrcABC={props.imgSrc}></Images>
                 <div className='card__info'>
                     <span className='card__span'>
                         {props.title}

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import Card from './components/Card'
 import NetFlexData from './components/NetFlexData'
-
+import App from './App'
 
 
 
@@ -105,21 +105,7 @@ import NetFlexData from './components/NetFlexData'
 
 
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
-    <h1 className='heading_style'> List of top 5 netflix series. </h1>
-
-    {NetFlexData.map((val, index) => {
-      return <Card
-        key={index}
-        imgSrc={val.imgSrc}
-        title={val.title}
-        seriesName={val.seriesName}
-        link={val.link}
-      />
-    })}
-
-  </>,
+  <App />,
 )
 
