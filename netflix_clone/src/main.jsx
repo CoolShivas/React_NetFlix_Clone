@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 
 
-function Card() {
+function Card(props) {
   return <>
     <div className='cards'>
       <div className='card'>
-        <img src="" alt="Image not found" className='card__img' />
+        <img src={props.imgSrc} alt="Image not found" className='card__img' />
         <div className='card__info'>
           <span className='card__category'>
-            A Netflix  Original Series
+            {props.title}
           </span>
-          <h3 className='card__title'>  </h3>
-          <a href="" target='_blank'>
+          <h3 className='card__title'> {props.seriesName} </h3>
+          <a href={props.link} target='_blank'>
             <button> Watch Now </button>
           </a>
         </div>
@@ -28,7 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <Card
       imgSrc="https://wallpapercave.com/wp/wp4056410.jpg"
-      title="Dark"
+      title="A Netflix  Original Series"
       seriesName="Dark"
       link="https://www.netflix.com/in/title/80990668?source=35"
     />
