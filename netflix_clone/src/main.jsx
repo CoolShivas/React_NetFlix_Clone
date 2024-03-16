@@ -4,6 +4,9 @@ import './index.css'
 import Card from './components/Card'
 import NetFlexData from './components/NetFlexData'
 
+
+
+
 // console.log(NetFlexData[0]);
 // console.log(NetFlexData[0].seriesName);
 
@@ -34,43 +37,68 @@ import NetFlexData from './components/NetFlexData'
 
 
 
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <>
+//     <h1 className='heading_style'> List of top 5 netflix series. </h1>
+
+//     <Card
+//       imgSrc={NetFlexData[0].imgSrc}
+//       title={NetFlexData[0].title}
+//       seriesName={NetFlexData[0].seriesName}
+//       link={NetFlexData[0].link}
+//     />
+
+//     <Card
+//       imgSrc={NetFlexData[1].imgSrc}
+//       title={NetFlexData[1].title}
+//       seriesName={NetFlexData[1].seriesName}
+//       link={NetFlexData[1].link}
+//     />
+
+//     <Card
+//       imgSrc={NetFlexData[2].imgSrc}
+//       title={NetFlexData[2].title}
+//       seriesName={NetFlexData[2].seriesName}
+//       link={NetFlexData[2].link}
+//     />
+
+//     <Card
+//       imgSrc={NetFlexData[3].imgSrc}
+//       title={NetFlexData[3].title}
+//       seriesName={NetFlexData[3].seriesName}
+//       link={NetFlexData[3].link}
+//     />
+
+//     <Card
+//       imgSrc={NetFlexData[4].imgSrc}
+//       title={NetFlexData[4].title}
+//       seriesName={NetFlexData[4].seriesName}
+//       link={NetFlexData[4].link}
+//     />
+
+//   </>,
+// )
+
+
+
+
+function special(val) {
+  return <Card
+    imgSrc={val.imgSrc}
+    title={val.title}
+    seriesName={val.seriesName}
+    link={val.link}
+  />
+}
+
+
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <h1 className='heading_style'> List of top 5 netflix series. </h1>
-    <Card
-      imgSrc={NetFlexData[0].imgSrc}
-      title={NetFlexData[0].title}
-      seriesName={NetFlexData[0].seriesName}
-      link={NetFlexData[0].link}
-    />
-
-    <Card
-      imgSrc={NetFlexData[1].imgSrc}
-      title={NetFlexData[1].title}
-      seriesName={NetFlexData[1].seriesName}
-      link={NetFlexData[1].link}
-    />
-
-    <Card
-      imgSrc={NetFlexData[2].imgSrc}
-      title={NetFlexData[2].title}
-      seriesName={NetFlexData[2].seriesName}
-      link={NetFlexData[2].link}
-    />
-
-    <Card
-      imgSrc={NetFlexData[3].imgSrc}
-      title={NetFlexData[3].title}
-      seriesName={NetFlexData[3].seriesName}
-      link={NetFlexData[3].link}
-    />
-
-    <Card
-      imgSrc={NetFlexData[4].imgSrc}
-      title={NetFlexData[4].title}
-      seriesName={NetFlexData[4].seriesName}
-      link={NetFlexData[4].link}
-    />
+    {NetFlexData.map(special)}
 
   </>,
 )
+
