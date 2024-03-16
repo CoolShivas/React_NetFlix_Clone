@@ -20,7 +20,7 @@ const NetFlexData = [
     {
         seriesName: "the vampire diaries",
         imgSrc: "https://images.justwatch.com/poster/8589251/s592",
-        title: "azon original series",
+        title: "amazon original series",
         link: "https://www.netflix.com/in/title/80990668?source=35",
     },
     {

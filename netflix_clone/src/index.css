@@ -102,3 +102,13 @@ button {
     width: 90%;
   }
 }
+
+
+.para_sorry {
+  float: none;
+  font-size: 50px;
+  color: tomato;
+  font-weight: 900;
+  text-align: center;
+  margin: 150px;
+}
