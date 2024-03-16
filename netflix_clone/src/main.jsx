@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
+
+function Card() {
+  return <>
     <div className='cards'>
       <div className='card'>
         <img src="https://wallpapercave.com/wp/wp4056410.jpg" alt="Image not found" className='card__img' />
@@ -18,5 +19,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </div>
       </div>
     </div>
-  </>,
+  </>
+}
+
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <Card />
 )
